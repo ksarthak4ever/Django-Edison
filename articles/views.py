@@ -83,7 +83,7 @@ class ArticleView(APIView):
 		except Exception as e:
 			return Response(data=["Invalid Article ID"], status=status.HTTP_400_BAD_REQUEST)
 
-		article_serializer = ArticleSerializer(article_obj, data=req_data)
+		article_serializer = ArticleSerializer(article_obj, data=req_data, partial=True)
 		if article_serializer.is_valid():
 			article_serializer.save()
 			return Response(data=article_serializer.data, status=status.HTTP_200_OK)
