@@ -147,4 +147,4 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'accounts.User'
 
-django.heroku.settings(locals())
+django_heroku.settings(locals())
