@@ -23,6 +23,9 @@ class UserManager(BaseUserManager):
         first_name = kwargs.get('first_name', None)
         last_name = kwargs.get('last_name', None)
 
+        if not first_name:
+            raise TypeError('Users must have first name.')
+
         if not email:
             raise TypeError('Users must have a email')
 
