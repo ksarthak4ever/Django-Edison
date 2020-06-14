@@ -13,7 +13,7 @@ from accounts.serializers import (
 
 class UserRegisterView(APIView):
     """
-    API to register user to Truecaller.
+    API to register user to Edison.
     """
     permission_classes = (AllowAny,)
 
